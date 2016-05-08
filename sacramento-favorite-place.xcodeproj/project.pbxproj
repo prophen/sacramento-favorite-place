@@ -12,6 +12,9 @@
 		E6845A0A1CDF1DBC0049F2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6845A081CDF1DBC0049F2A5 /* Main.storyboard */; };
 		E6845A0C1CDF1DBC0049F2A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6845A0B1CDF1DBC0049F2A5 /* Assets.xcassets */; };
 		E6845A0F1CDF1DBC0049F2A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6845A0D1CDF1DBC0049F2A5 /* LaunchScreen.storyboard */; };
+		E6845A171CDF29EA0049F2A5 /* RoundedBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6845A161CDF29EA0049F2A5 /* RoundedBtn.swift */; };
+		E6845A1C1CDF31280049F2A5 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6845A1B1CDF31280049F2A5 /* AboutVC.swift */; };
+		E6845A1E1CDF31530049F2A5 /* PhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6845A1D1CDF31530049F2A5 /* PhotosVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		E6845A0B1CDF1DBC0049F2A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6845A0E1CDF1DBC0049F2A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6845A101CDF1DBC0049F2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6845A161CDF29EA0049F2A5 /* RoundedBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBtn.swift; sourceTree = "<group>"; };
+		E6845A1B1CDF31280049F2A5 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		E6845A1D1CDF31530049F2A5 /* PhotosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		E6845A031CDF1DBC0049F2A5 /* sacramento-favorite-place */ = {
 			isa = PBXGroup;
 			children = (
+				E6845A1A1CDF30CE0049F2A5 /* Controller */,
+				E6845A191CDF30CC0049F2A5 /* View */,
+				E6845A181CDF30C90049F2A5 /* Model */,
 				E6845A041CDF1DBC0049F2A5 /* AppDelegate.swift */,
-				E6845A061CDF1DBC0049F2A5 /* ViewController.swift */,
-				E6845A081CDF1DBC0049F2A5 /* Main.storyboard */,
 				E6845A0B1CDF1DBC0049F2A5 /* Assets.xcassets */,
 				E6845A0D1CDF1DBC0049F2A5 /* LaunchScreen.storyboard */,
 				E6845A101CDF1DBC0049F2A5 /* Info.plist */,
 			);
 			path = "sacramento-favorite-place";
+			sourceTree = "<group>";
+		};
+		E6845A181CDF30C90049F2A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E6845A191CDF30CC0049F2A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6845A161CDF29EA0049F2A5 /* RoundedBtn.swift */,
+				E6845A081CDF1DBC0049F2A5 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E6845A1A1CDF30CE0049F2A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E6845A061CDF1DBC0049F2A5 /* ViewController.swift */,
+				E6845A1B1CDF31280049F2A5 /* AboutVC.swift */,
+				E6845A1D1CDF31530049F2A5 /* PhotosVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6845A1C1CDF31280049F2A5 /* AboutVC.swift in Sources */,
 				E6845A071CDF1DBC0049F2A5 /* ViewController.swift in Sources */,
+				E6845A171CDF29EA0049F2A5 /* RoundedBtn.swift in Sources */,
 				E6845A051CDF1DBC0049F2A5 /* AppDelegate.swift in Sources */,
+				E6845A1E1CDF31530049F2A5 /* PhotosVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +289,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prophenapps.sacramento-favorite-place";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -264,6 +301,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prophenapps.sacramento-favorite-place";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
