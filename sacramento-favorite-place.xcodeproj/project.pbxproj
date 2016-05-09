@@ -15,6 +15,7 @@
 		E6845A171CDF29EA0049F2A5 /* RoundedBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6845A161CDF29EA0049F2A5 /* RoundedBtn.swift */; };
 		E6845A1C1CDF31280049F2A5 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6845A1B1CDF31280049F2A5 /* AboutVC.swift */; };
 		E6845A1E1CDF31530049F2A5 /* PhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6845A1D1CDF31530049F2A5 /* PhotosVC.swift */; };
+		E6A178451CE0809400C7F232 /* RoundedImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A178441CE0809400C7F232 /* RoundedImg.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E6845A161CDF29EA0049F2A5 /* RoundedBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBtn.swift; sourceTree = "<group>"; };
 		E6845A1B1CDF31280049F2A5 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		E6845A1D1CDF31530049F2A5 /* PhotosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosVC.swift; sourceTree = "<group>"; };
+		E6A178441CE0809400C7F232 /* RoundedImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				E6845A161CDF29EA0049F2A5 /* RoundedBtn.swift */,
 				E6845A081CDF1DBC0049F2A5 /* Main.storyboard */,
+				E6A178441CE0809400C7F232 /* RoundedImg.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6845A1C1CDF31280049F2A5 /* AboutVC.swift in Sources */,
+				E6A178451CE0809400C7F232 /* RoundedImg.swift in Sources */,
 				E6845A071CDF1DBC0049F2A5 /* ViewController.swift in Sources */,
 				E6845A171CDF29EA0049F2A5 /* RoundedBtn.swift in Sources */,
 				E6845A051CDF1DBC0049F2A5 /* AppDelegate.swift in Sources */,
@@ -324,6 +328,7 @@
 				E6845A151CDF1DBC0049F2A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
