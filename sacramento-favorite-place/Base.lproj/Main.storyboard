@@ -21,6 +21,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bridge-bw" translatesAutoresizingMaskIntoConstraints="NO" id="KOh-Lu-Daa">
                                 <rect key="frame" x="4" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bridge-bwL" translatesAutoresizingMaskIntoConstraints="NO" id="FgD-pC-yAW">
+                                <rect key="frame" x="4" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6J1-Xx-eaT">
                                 <rect key="frame" x="436" y="28" width="144" height="144"/>
                                 <subviews>
@@ -32,6 +35,8 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="30"/>
                                                 <color key="textColor" red="1" green="0.70287369762938134" blue="0.13259877566181577" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="shadowOffset" width="-1" height="-1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALIFORNIA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTt-dl-gi9">
                                                 <rect key="frame" x="0.0" y="30" width="144" height="42"/>
@@ -81,16 +86,43 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KOh-Lu-Daa" secondAttribute="bottom" id="2Px-OW-mZS"/>
                             <constraint firstItem="6J1-Xx-eaT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="8AW-Hv-Wd2"/>
+                            <constraint firstItem="FgD-pC-yAW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QAs-lF-iXJ"/>
+                            <constraint firstItem="FgD-pC-yAW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SBV-bb-oAf"/>
                             <constraint firstItem="6J1-Xx-eaT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kEc-sa-EV1"/>
                             <constraint firstItem="KOh-Lu-Daa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="obl-kq-AfG"/>
                             <constraint firstAttribute="trailing" secondItem="KOh-Lu-Daa" secondAttribute="trailing" id="pk1-2p-bxs"/>
                             <constraint firstItem="KOh-Lu-Daa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pka-bP-hEf"/>
+                            <constraint firstAttribute="trailing" secondItem="FgD-pC-yAW" secondAttribute="trailing" id="qgb-us-WKP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FgD-pC-yAW" secondAttribute="bottom" id="sir-c6-1NO"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="FgD-pC-yAW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QAs-lF-iXJ"/>
+                                <exclude reference="SBV-bb-oAf"/>
+                                <exclude reference="qgb-us-WKP"/>
+                                <exclude reference="sir-c6-1NO"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="KOh-Lu-Daa"/>
+                                <include reference="FgD-pC-yAW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QAs-lF-iXJ"/>
+                                <include reference="SBV-bb-oAf"/>
+                                <include reference="qgb-us-WKP"/>
+                                <include reference="sir-c6-1NO"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-439" y="350"/>
+            <point key="canvasLocation" x="-432" y="350"/>
         </scene>
         <!--AboutVC-->
         <scene sceneID="ket-fV-pzD">
@@ -104,7 +136,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityscape-1022729" translatesAutoresizingMaskIntoConstraints="NO" id="T1P-hb-5TS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutBGP" translatesAutoresizingMaskIntoConstraints="NO" id="T1P-hb-5TS">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="122" id="nNZ-da-PhT"/>
@@ -115,126 +147,101 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEB-oc-CuU">
-                                <rect key="frame" x="20" y="105" width="560" height="475"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uxo-Vh-7wG">
-                                        <rect key="frame" x="8" y="8" width="544" height="459"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="D4C-jf-zLA">
-                                                <rect key="frame" x="0.0" y="0.0" width="544" height="113"/>
-                                                <string key="text">Sacramento is the capital city of the U.S. state of California and the seat of Sacramento County. Its estimated 2014 population of 485,199 made it the sixth-largest city in California. In 2002, the Civil Rights Project at Harvard University conducted for TIME magazine named Sacramento "America's Most Diverse City."</string>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="96x-KQ-REF">
-                                                <rect key="frame" x="0.0" y="118" width="544" height="181"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HISTORY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1kF-sT-9aE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="544" height="41"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                                        <color key="textColor" red="0.99215686270000003" green="0.64705882349999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="QIu-1P-akI">
-                                                        <rect key="frame" x="0.0" y="46" width="544" height="135"/>
-                                                        <string key="text">Sacramento became a city through the efforts of the Swiss immigrant John Sutter, Sr., his son John Augustus Sutter, Jr., and James W. Marshall. Sacramento grew quickly thanks to the protection of Sutter's Fort, which was established by Sutter in 1839. During the California Gold Rush, Sacramento was a major distribution point, a commercial and agricultural center, and a terminus for wagon trains, stagecoaches, riverboats, the telegraph, the Pony Express, and the First Transcontinental Railroad.</string>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KAP-sH-8wY">
-                                                <rect key="frame" x="0.0" y="304" width="544" height="155"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THINGS TO DO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="vv2-xF-tnc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="544" height="43"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                                        <color key="textColor" red="0.99215686270000003" green="0.64705882349999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NvX-9y-ZqB">
-                                                        <rect key="frame" x="0.0" y="48" width="544" height="107"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JpO-hJ-c3F">
-                                                                <rect key="frame" x="0.0" y="0.0" width="267" height="107"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crocker Art Museum" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Mzc-8K-5Vt">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="267" height="32"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="California State Railroad Museum" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="VIu-L5-Xir">
-                                                                        <rect key="frame" x="0.0" y="37" width="267" height="33"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="California State Capitol and Museum" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="naw-T7-w8Q">
-                                                                        <rect key="frame" x="0.0" y="75" width="267" height="32"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="T3v-4H-R1S">
-                                                                <rect key="frame" x="277" y="0.0" width="267" height="107"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="American River Bicycle Trail" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="wb3-61-jRC">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="32"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sutter's Fort State Historic Park" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="jeP-3e-DvK">
-                                                                        <rect key="frame" x="0.0" y="37" width="168" height="33"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old Sacramento" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="daB-7h-QN6">
-                                                                        <rect key="frame" x="0.0" y="75" width="85" height="32"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutBGL" translatesAutoresizingMaskIntoConstraints="NO" id="6qz-9u-7PB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="122" id="gKM-2d-ADX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gKM-2d-ADX"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="rUf-Is-yvk" customClass="BodyTextLbl" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="573" height="112"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="uxo-Vh-7wG" secondAttribute="trailing" id="7Hw-lx-7Hw"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="uxo-Vh-7wG" secondAttribute="bottom" id="H9d-tV-hnd"/>
-                                    <constraint firstItem="uxo-Vh-7wG" firstAttribute="leading" secondItem="LEB-oc-CuU" secondAttribute="leadingMargin" id="c6M-3M-CWs"/>
-                                    <constraint firstItem="uxo-Vh-7wG" firstAttribute="top" secondItem="LEB-oc-CuU" secondAttribute="topMargin" id="ezi-8s-bRQ"/>
+                                    <constraint firstAttribute="height" constant="115" id="42D-fv-N5i"/>
+                                    <constraint firstAttribute="height" constant="112" id="bMt-8c-oJv">
+                                        <variation key="heightClass=compact" constant="65"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="u6T-f2-Twg"/>
                                 </constraints>
-                            </view>
-                            <view alpha="0.75" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QX2-Mp-Tgf">
-                                <rect key="frame" x="0.0" y="32" width="600" height="60"/>
+                                <string key="text">Sacramento is the capital city of the U.S. state of California and the seat of Sacramento County. Its estimated 2014 population of 485,199 made it the sixth-largest city in California. In 2002, the Civil Rights Project at Harvard University conducted for TIME magazine named Sacramento "America's Most Diverse City."</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="42D-fv-N5i"/>
+                                        <exclude reference="u6T-f2-Twg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="95" width="560" height="82"/>
+                                    <mask key="constraints">
+                                        <exclude reference="u6T-f2-Twg"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ttf-qa-9EK">
+                                <rect key="frame" x="-1619" y="82" width="3938" height="236"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="luy-36-Rb5" customClass="BodyTextLbl" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="3797" height="196"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="KL7-dG-Fa3"/>
+                                            <constraint firstAttribute="height" constant="196" id="eUM-Sg-57P"/>
+                                        </constraints>
+                                        <string key="text">Sacramento became a city through the efforts of the Swiss immigrant John Sutter, Sr., his son John Augustus Sutter, Jr., and James W. Marshall. Sacramento grew quickly thanks to the protection of Sutter's Fort, which was established by Sutter in 1839. During the California Gold Rush, Sacramento was a major distribution point, a commercial and agricultural center, and a terminus for wagon trains, stagecoaches, riverboats, the telegraph, the Pony Express, and the First Transcontinental Railroad.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="KL7-dG-Fa3"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-wH-ql7" customClass="BodyTextLbl" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                        <rect key="frame" x="121" y="20" width="3797" height="151"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="122" id="Qlv-5B-wEP"/>
+                                            <constraint firstAttribute="height" constant="151" id="Qp7-eL-QEg"/>
+                                        </constraints>
+                                        <string key="text">	• 	Crocker Art Museum
+	• 	California State Railroad Museum
+	• 	California State Capitol and Museum
+	• 	American River Bicycle Trail
+	• 	Sutter’s Fort State Historic Park
+	• 	Old Sacramento</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Qlv-5B-wEP"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <variation key="heightClass=compact" alignment="fill" misplaced="YES">
+                                    <rect key="frame" x="20" y="194" width="560" height="215"/>
+                                </variation>
+                            </stackView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QX2-Mp-Tgf">
+                                <rect key="frame" x="0.0" y="20" width="600" height="65"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-gg-1DD">
-                                        <rect key="frame" x="214" y="19" width="173" height="22"/>
+                                        <rect key="frame" x="214" y="21" width="171" height="22"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-lE-tUh">
-                                                <rect key="frame" x="0.0" y="0.0" width="55" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Sacramento" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-lE-tUh">
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="22"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sacramento" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc8-Jc-rqP">
-                                                <rect key="frame" x="62" y="0.0" width="111" height="22"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                                                <color key="textColor" red="1" green="0.70287369759999996" blue="0.1325987757" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -242,60 +249,313 @@
                                             <constraint firstAttribute="height" constant="22" id="Xh5-VE-92R"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6X-43-hdo" customClass="RoundedBtn" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                        <rect key="frame" x="277" y="18" width="46" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="5T0-wN-jT6"/>
+                                            <constraint firstAttribute="height" constant="20" id="XJB-OP-eVC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" red="0.85882352941176465" green="0.50980392156862742" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="XJB-OP-eVC"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="backPressed:" destination="3My-bP-Rh6" eventType="touchUpInside" id="iR6-Td-gWQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="ORp-gg-1DD" firstAttribute="centerY" secondItem="QX2-Mp-Tgf" secondAttribute="centerY" id="Gdg-PF-t0V"/>
-                                    <constraint firstAttribute="height" constant="60" id="Jhv-IW-UMs"/>
+                                    <constraint firstItem="P6X-43-hdo" firstAttribute="leading" secondItem="QX2-Mp-Tgf" secondAttribute="leading" constant="10" id="C9z-JV-aZH"/>
+                                    <constraint firstItem="ORp-gg-1DD" firstAttribute="centerY" secondItem="QX2-Mp-Tgf" secondAttribute="centerY" constant="-1" id="Gdg-PF-t0V"/>
+                                    <constraint firstAttribute="height" constant="65" id="Jhv-IW-UMs"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="T3T-tt-oJ4"/>
+                                    <constraint firstItem="P6X-43-hdo" firstAttribute="centerX" secondItem="ORp-gg-1DD" secondAttribute="centerX" id="a8p-7B-PVW"/>
                                     <constraint firstItem="ORp-gg-1DD" firstAttribute="centerX" secondItem="QX2-Mp-Tgf" secondAttribute="centerX" id="k4V-Oo-Q2e"/>
+                                    <constraint firstItem="P6X-43-hdo" firstAttribute="centerY" secondItem="ORp-gg-1DD" secondAttribute="centerY" id="sQx-FG-UeJ"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="T3T-tt-oJ4"/>
+                                        <exclude reference="a8p-7B-PVW"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6X-43-hdo" customClass="RoundedBtn" customModule="sacramento_favorite_place" customModuleProvider="target">
-                                <rect key="frame" x="277" y="286" width="46" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kv-Cz-FI5">
+                                <rect key="frame" x="0.0" y="228" width="120" height="45"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.64705882349999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="5T0-wN-jT6"/>
+                                    <constraint firstAttribute="width" constant="120" id="NGI-HK-Nde"/>
+                                    <constraint firstAttribute="height" constant="30" id="u9e-f8-SER">
+                                        <variation key="heightClass=compact" constant="20"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backPressed:" destination="3My-bP-Rh6" eventType="touchUpInside" id="iR6-Td-gWQ"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="570" y="174" width="120" height="30"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Things to do" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zI-2f-u8A">
+                                <rect key="frame" x="0.0" y="473" width="150" height="45"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.64705882349999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9g3-ez-Vg6">
+                                        <variation key="heightClass=compact" constant="20"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="150" id="B5G-s8-eAN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="300" y="185" width="150" height="30"/>
+                                </variation>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Elj-Ao-ltB">
+                                <rect key="frame" x="0.0" y="109" width="580" height="475"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MT6-Mz-dG5" customClass="BodyTextLbl" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="573" height="112"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="6YP-gk-GA0"/>
+                                            <constraint firstAttribute="height" constant="112" id="etN-hK-09U"/>
+                                        </constraints>
+                                        <string key="text">Sacramento is the capital city of the U.S. state of California and the seat of Sacramento County. Its estimated 2014 population of 485,199 made it the sixth-largest city in California. In 2002, the Civil Rights Project at Harvard University conducted for TIME magazine named Sacramento "America's Most Diverse City."</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6YP-gk-GA0"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="573" height="62"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="JQq-ld-lay" customClass="BodyTextLbl" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="142" width="578" height="152"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="196" id="LF9-sk-k2f"/>
+                                            <constraint firstAttribute="height" constant="200" id="qh0-q0-ziC"/>
+                                        </constraints>
+                                        <string key="text">Sacramento became a city through the efforts of the Swiss immigrant John Sutter, Sr., his son John Augustus Sutter, Jr., and James W. Marshall. Sacramento grew quickly thanks to the protection of Sutter's Fort, which was established by Sutter in 1839. During the California Gold Rush, Sacramento was a major distribution point, a commercial and agricultural center, and a terminus for wagon trains, stagecoaches, riverboats, the telegraph, the Pony Express, and the First Transcontinental Railroad.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="qh0-q0-ziC"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="92" width="578" height="2"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zTj-jT-qVN" customClass="BodyTextLbl" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="324" width="580" height="151"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="122" id="PZp-1w-bb0"/>
+                                            <constraint firstAttribute="height" constant="151" id="Tyr-Ha-ToB"/>
+                                        </constraints>
+                                        <string key="text">	• 	Crocker Art Museum
+	• 	California State Railroad Museum
+	• 	California State Capitol and Museum
+	• 	American River Bicycle Trail
+	• 	Sutter’s Fort State Historic Park
+	• 	Old Sacramento</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="PZp-1w-bb0"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="124" width="580" height="151"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MT6-Mz-dG5" firstAttribute="leading" secondItem="Elj-Ao-ltB" secondAttribute="leading" constant="20" id="F9H-bG-534"/>
+                                    <constraint firstAttribute="trailing" secondItem="zTj-jT-qVN" secondAttribute="trailing" id="Ohb-Pb-cbJ"/>
+                                </constraints>
+                                <variation key="heightClass=compact" axis="vertical"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-ph-Laz">
+                                <rect key="frame" x="0.0" y="228" width="120" height="45"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.64705882349999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XnU-fa-CPp"/>
+                                    <constraint firstAttribute="width" constant="120" id="ung-q4-lCH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Things to do" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsJ-RD-6Ky">
+                                <rect key="frame" x="0.0" y="473" width="150" height="45"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.64705882349999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="amS-CL-V3F"/>
+                                    <constraint firstAttribute="height" constant="30" id="qKt-6f-620"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LEB-oc-CuU" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leadingMargin" id="Fct-IQ-MmI"/>
+                            <constraint firstItem="6zI-2f-u8A" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leadingMargin" constant="-20" id="0xM-LK-8ZJ"/>
+                            <constraint firstItem="rUf-Is-yvk" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leadingMargin" constant="10" id="59g-GS-xvh">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="8kv-Cz-FI5" firstAttribute="leading" secondItem="luy-36-Rb5" secondAttribute="leading" id="6NK-5W-iIM"/>
+                            <constraint firstItem="7q8-iC-6fD" firstAttribute="top" secondItem="T1P-hb-5TS" secondAttribute="bottom" id="7hO-tr-wWi"/>
+                            <constraint firstItem="8kv-Cz-FI5" firstAttribute="leading" secondItem="Ttf-qa-9EK" secondAttribute="trailing" id="8IY-Kg-UtU"/>
+                            <constraint firstItem="7q8-iC-6fD" firstAttribute="top" secondItem="6qz-9u-7PB" secondAttribute="bottom" id="8iy-w8-FCd"/>
+                            <constraint firstItem="T1P-hb-5TS" firstAttribute="top" secondItem="r1g-WU-kbN" secondAttribute="top" id="9b6-Ef-EuJ"/>
+                            <constraint firstItem="4Mm-wH-ql7" firstAttribute="top" secondItem="6zI-2f-u8A" secondAttribute="top" constant="20" id="A9q-Md-PPu">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="6qz-9u-7PB" secondAttribute="trailing" id="ACF-Hb-bKr"/>
+                            <constraint firstItem="Ttf-qa-9EK" firstAttribute="top" secondItem="QX2-Mp-Tgf" secondAttribute="bottom" constant="10" id="BXf-FW-4zW"/>
+                            <constraint firstItem="Elj-Ao-ltB" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leading" id="HBz-zB-LKR"/>
+                            <constraint firstItem="qsJ-RD-6Ky" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leadingMargin" constant="-20" id="Jbx-8I-NbT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ttf-qa-9EK" secondAttribute="trailing" constant="10" id="Jl1-Qj-DXF">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="oe5-ph-Laz" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leadingMargin" constant="-20" id="Kwy-cE-Fc2"/>
+                            <constraint firstAttribute="bottom" secondItem="Ttf-qa-9EK" secondAttribute="bottom" constant="10" id="Lhq-ht-5zN"/>
+                            <constraint firstItem="6qz-9u-7PB" firstAttribute="top" secondItem="r1g-WU-kbN" secondAttribute="top" id="PER-Ya-J9C"/>
                             <constraint firstAttribute="trailing" secondItem="QX2-Mp-Tgf" secondAttribute="trailing" id="PiR-Kx-PMp"/>
-                            <constraint firstItem="7q8-iC-6fD" firstAttribute="top" secondItem="LEB-oc-CuU" secondAttribute="bottom" constant="20" id="S2D-vw-w15"/>
+                            <constraint firstItem="8kv-Cz-FI5" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leading" id="R0f-Nc-TUw"/>
                             <constraint firstAttribute="trailing" secondItem="T1P-hb-5TS" secondAttribute="trailing" id="TTe-7i-61A"/>
                             <constraint firstItem="T1P-hb-5TS" firstAttribute="top" secondItem="r1g-WU-kbN" secondAttribute="top" id="WIu-j3-SgT"/>
-                            <constraint firstItem="P6X-43-hdo" firstAttribute="centerY" secondItem="ORp-gg-1DD" secondAttribute="centerY" id="YKt-V3-cUu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rUf-Is-yvk" secondAttribute="trailing" constant="10" id="XRh-Ac-5Nm">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="luy-36-Rb5" firstAttribute="top" secondItem="8kv-Cz-FI5" secondAttribute="top" constant="20" id="XxW-Jc-itp"/>
+                            <constraint firstItem="Ttf-qa-9EK" firstAttribute="top" secondItem="rUf-Is-yvk" secondAttribute="bottom" constant="10" id="Zec-sy-sf1">
+                                <variation key="heightClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="Elj-Ao-ltB" secondAttribute="trailing" constant="20" id="Zpu-D8-iGx"/>
+                            <constraint firstItem="rUf-Is-yvk" firstAttribute="top" secondItem="QX2-Mp-Tgf" secondAttribute="bottom" constant="10" id="Zsn-hg-QkS"/>
                             <constraint firstAttribute="trailing" secondItem="QX2-Mp-Tgf" secondAttribute="trailing" id="cFo-Qn-tjN"/>
-                            <constraint firstItem="LEB-oc-CuU" firstAttribute="trailing" secondItem="r1g-WU-kbN" secondAttribute="trailingMargin" id="e0k-Zn-76i"/>
+                            <constraint firstItem="4Mm-wH-ql7" firstAttribute="leading" secondItem="6zI-2f-u8A" secondAttribute="leading" id="dsA-q0-f8v"/>
                             <constraint firstItem="7q8-iC-6fD" firstAttribute="top" secondItem="T1P-hb-5TS" secondAttribute="bottom" id="elv-1J-7Su"/>
+                            <constraint firstItem="Elj-Ao-ltB" firstAttribute="top" secondItem="QX2-Mp-Tgf" secondAttribute="bottom" constant="20" id="esG-6U-iFg"/>
                             <constraint firstItem="QX2-Mp-Tgf" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leading" id="fCM-Yw-M0X"/>
+                            <constraint firstItem="luy-36-Rb5" firstAttribute="top" secondItem="8kv-Cz-FI5" secondAttribute="top" constant="20" id="fLE-4g-gcG"/>
                             <constraint firstItem="QX2-Mp-Tgf" firstAttribute="centerX" secondItem="T1P-hb-5TS" secondAttribute="centerX" id="g7V-Jc-hga"/>
-                            <constraint firstItem="QX2-Mp-Tgf" firstAttribute="top" secondItem="Atj-4z-Ema" secondAttribute="bottom" constant="10" id="iC8-OE-AsQ"/>
+                            <constraint firstItem="luy-36-Rb5" firstAttribute="top" secondItem="8kv-Cz-FI5" secondAttribute="top" constant="20" id="ggz-pC-f9J">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="QX2-Mp-Tgf" firstAttribute="top" secondItem="Atj-4z-Ema" secondAttribute="bottom" id="iC8-OE-AsQ"/>
+                            <constraint firstItem="6qz-9u-7PB" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leading" id="iIX-6H-dnE"/>
+                            <constraint firstAttribute="trailing" secondItem="T1P-hb-5TS" secondAttribute="trailing" id="j9X-h8-NPH"/>
+                            <constraint firstItem="8kv-Cz-FI5" firstAttribute="leading" secondItem="Ttf-qa-9EK" secondAttribute="trailing" id="jDe-EM-1ga"/>
                             <constraint firstItem="QX2-Mp-Tgf" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leading" id="niT-8X-95U"/>
-                            <constraint firstItem="LEB-oc-CuU" firstAttribute="top" secondItem="QX2-Mp-Tgf" secondAttribute="bottom" constant="15" id="oOQ-IW-bI0"/>
-                            <constraint firstItem="P6X-43-hdo" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leadingMargin" constant="5" id="rnV-Zt-ena"/>
+                            <constraint firstItem="qsJ-RD-6Ky" firstAttribute="top" secondItem="zTj-jT-qVN" secondAttribute="top" constant="-20" id="o5I-XX-IHn"/>
+                            <constraint firstItem="7q8-iC-6fD" firstAttribute="top" secondItem="Elj-Ao-ltB" secondAttribute="bottom" constant="20" id="q9x-Ue-UwB"/>
+                            <constraint firstItem="JQq-ld-lay" firstAttribute="top" secondItem="oe5-ph-Laz" secondAttribute="top" constant="20" id="qqb-hU-485"/>
+                            <constraint firstItem="Ttf-qa-9EK" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leadingMargin" constant="10" id="srV-Ow-tmB">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="T1P-hb-5TS" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leading" id="t7k-qJ-woG"/>
                             <constraint firstItem="T1P-hb-5TS" firstAttribute="centerY" secondItem="QX2-Mp-Tgf" secondAttribute="centerY" id="v8a-th-0Hw"/>
                             <constraint firstItem="T1P-hb-5TS" firstAttribute="leading" secondItem="r1g-WU-kbN" secondAttribute="leading" id="yFq-eu-gNJ"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6qz-9u-7PB"/>
+                                <exclude reference="rUf-Is-yvk"/>
+                                <exclude reference="Ttf-qa-9EK"/>
+                                <exclude reference="8kv-Cz-FI5"/>
+                                <exclude reference="6zI-2f-u8A"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="v8a-th-0Hw"/>
+                                <exclude reference="ACF-Hb-bKr"/>
+                                <exclude reference="PER-Ya-J9C"/>
+                                <exclude reference="iIX-6H-dnE"/>
                                 <exclude reference="g7V-Jc-hga"/>
+                                <exclude reference="59g-GS-xvh"/>
+                                <exclude reference="XRh-Ac-5Nm"/>
+                                <exclude reference="Zsn-hg-QkS"/>
+                                <exclude reference="BXf-FW-4zW"/>
+                                <exclude reference="Jl1-Qj-DXF"/>
+                                <exclude reference="Lhq-ht-5zN"/>
+                                <exclude reference="Zec-sy-sf1"/>
+                                <exclude reference="srV-Ow-tmB"/>
+                                <exclude reference="XxW-Jc-itp"/>
+                                <exclude reference="fLE-4g-gcG"/>
+                                <exclude reference="ggz-pC-f9J"/>
+                                <exclude reference="0xM-LK-8ZJ"/>
+                                <exclude reference="A9q-Md-PPu"/>
+                                <exclude reference="dsA-q0-f8v"/>
+                                <exclude reference="8iy-w8-FCd"/>
+                                <exclude reference="6NK-5W-iIM"/>
+                                <exclude reference="8IY-Kg-UtU"/>
+                                <exclude reference="R0f-Nc-TUw"/>
+                                <exclude reference="jDe-EM-1ga"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="T1P-hb-5TS"/>
+                                <include reference="6qz-9u-7PB"/>
+                                <include reference="rUf-Is-yvk"/>
+                                <include reference="Ttf-qa-9EK"/>
+                                <include reference="8kv-Cz-FI5"/>
+                                <include reference="6zI-2f-u8A"/>
+                                <exclude reference="Elj-Ao-ltB"/>
+                                <exclude reference="oe5-ph-Laz"/>
+                                <exclude reference="qsJ-RD-6Ky"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ACF-Hb-bKr"/>
+                                <include reference="PER-Ya-J9C"/>
+                                <include reference="iIX-6H-dnE"/>
+                                <include reference="59g-GS-xvh"/>
+                                <include reference="XRh-Ac-5Nm"/>
+                                <include reference="Zsn-hg-QkS"/>
+                                <exclude reference="BXf-FW-4zW"/>
+                                <include reference="Jl1-Qj-DXF"/>
+                                <include reference="Lhq-ht-5zN"/>
+                                <include reference="Zec-sy-sf1"/>
+                                <include reference="srV-Ow-tmB"/>
+                                <exclude reference="XxW-Jc-itp"/>
+                                <exclude reference="fLE-4g-gcG"/>
+                                <include reference="ggz-pC-f9J"/>
+                                <exclude reference="0xM-LK-8ZJ"/>
+                                <include reference="A9q-Md-PPu"/>
+                                <include reference="dsA-q0-f8v"/>
+                                <include reference="8iy-w8-FCd"/>
+                                <include reference="6NK-5W-iIM"/>
+                                <exclude reference="8IY-Kg-UtU"/>
+                                <exclude reference="R0f-Nc-TUw"/>
+                                <exclude reference="jDe-EM-1ga"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NyI-XU-5ve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212" y="350"/>
+            <point key="canvasLocation" x="212" y="349.5"/>
         </scene>
         <!--PhotosVC-->
         <scene sceneID="j7R-Ty-7XB">
@@ -309,22 +569,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixQ-6M-2B9">
-                                <rect key="frame" x="0.0" y="30" width="600" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photosBGP" translatesAutoresizingMaskIntoConstraints="NO" id="N0K-D7-ens">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p9d-yI-qfp">
+                                <rect key="frame" x="15" y="100" width="570" height="485"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lZ4-2t-ofS">
+                                        <rect key="frame" x="0.0" y="0.0" width="570" height="155"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="capitolPhotosP" translatesAutoresizingMaskIntoConstraints="NO" id="PNl-Wb-BPc" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="155"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" tag="-1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="churchPhotosP" translatesAutoresizingMaskIntoConstraints="NO" id="1N0-mH-HoD" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                                <rect key="frame" x="290" y="0.0" width="280" height="155"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MemorialPhotosP" translatesAutoresizingMaskIntoConstraints="NO" id="eNN-mf-nBe" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="165" width="570" height="155"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ni5-so-1VB">
+                                        <rect key="frame" x="0.0" y="330" width="570" height="155"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bridgePhotosP" translatesAutoresizingMaskIntoConstraints="NO" id="lka-Fu-Y3B" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="155"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pyramidPhotosP" translatesAutoresizingMaskIntoConstraints="NO" id="zzl-EK-mAr" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                                <rect key="frame" x="290" y="0.0" width="280" height="155"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixQ-6M-2B9">
+                                <rect key="frame" x="0.0" y="20" width="600" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pce-TI-QHp">
-                                        <rect key="frame" x="268" y="18" width="65" height="25"/>
+                                        <rect key="frame" x="268" y="20" width="65" height="25"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJz-Qi-4WO" customClass="RoundedBtn" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                        <rect key="frame" x="277" y="18" width="46" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="fEg-7X-H3Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backPressed:" destination="uJE-L5-530" eventType="touchUpInside" id="KER-tI-299"/>
+                                            <action selector="backPressed:" destination="3My-bP-Rh6" eventType="touchUpInside" id="Wri-ax-nZO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="jJz-Qi-4WO" firstAttribute="leading" secondItem="ixQ-6M-2B9" secondAttribute="leading" constant="10" id="5fd-KV-Sla"/>
                                     <constraint firstItem="pce-TI-QHp" firstAttribute="centerY" secondItem="ixQ-6M-2B9" secondAttribute="centerY" id="9ja-gg-lKi"/>
+                                    <constraint firstItem="jJz-Qi-4WO" firstAttribute="centerY" secondItem="pce-TI-QHp" secondAttribute="centerY" id="PhD-0B-OAV"/>
                                     <constraint firstItem="pce-TI-QHp" firstAttribute="centerX" secondItem="ixQ-6M-2B9" secondAttribute="centerX" id="fre-pi-gTE"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="o1s-9a-agd"/>
-                                    <constraint firstAttribute="height" constant="60" id="skf-vC-1nx"/>
+                                    <constraint firstAttribute="height" constant="65" id="skf-vC-1nx"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -332,59 +641,17 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJz-Qi-4WO" customClass="RoundedBtn" customModule="sacramento_favorite_place" customModuleProvider="target">
-                                <rect key="frame" x="25" y="46" width="46" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="fEg-7X-H3Z"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backPressed:" destination="uJE-L5-530" eventType="touchUpInside" id="KER-tI-299"/>
-                                    <action selector="backPressed:" destination="3My-bP-Rh6" eventType="touchUpInside" id="Wri-ax-nZO"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p9d-yI-qfp">
-                                <rect key="frame" x="15" y="105" width="570" height="480"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lZ4-2t-ofS">
-                                        <rect key="frame" x="0.0" y="0.0" width="570" height="153"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bridge-67773_1280-1" translatesAutoresizingMaskIntoConstraints="NO" id="PNl-Wb-BPc" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="153"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" tag="-1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="capital-273344_640" translatesAutoresizingMaskIntoConstraints="NO" id="1N0-mH-HoD" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
-                                                <rect key="frame" x="290" y="0.0" width="280" height="153"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memorial" translatesAutoresizingMaskIntoConstraints="NO" id="eNN-mf-nBe" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="163" width="570" height="154"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ni5-so-1VB">
-                                        <rect key="frame" x="0.0" y="327" width="570" height="153"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="church-1022787_640" translatesAutoresizingMaskIntoConstraints="NO" id="lka-Fu-Y3B" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="153"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sacramento-273365_1280" translatesAutoresizingMaskIntoConstraints="NO" id="zzl-EK-mAr" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
-                                                <rect key="frame" x="290" y="0.0" width="280" height="153"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="N0K-D7-ens" firstAttribute="top" secondItem="sHB-NM-jnE" secondAttribute="top" id="2K9-nf-fhw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p9d-yI-qfp" secondAttribute="trailing" id="31G-Je-dA5"/>
                             <constraint firstAttribute="trailing" secondItem="ixQ-6M-2B9" secondAttribute="trailing" id="38t-yA-Hy8"/>
                             <constraint firstItem="9vf-q8-43m" firstAttribute="top" secondItem="p9d-yI-qfp" secondAttribute="bottom" id="65c-X3-ah3"/>
+                            <constraint firstAttribute="trailing" secondItem="N0K-D7-ens" secondAttribute="trailing" id="67y-sy-ldx"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="centerY" secondItem="sHB-NM-jnE" secondAttribute="centerY" id="96Z-yc-kLL"/>
                             <constraint firstItem="ixQ-6M-2B9" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" id="CeF-O4-x6R"/>
-                            <constraint firstItem="ixQ-6M-2B9" firstAttribute="top" secondItem="njj-gf-gZE" secondAttribute="bottom" constant="10" id="HZk-xg-1vn"/>
+                            <constraint firstItem="ixQ-6M-2B9" firstAttribute="top" secondItem="njj-gf-gZE" secondAttribute="bottom" id="HZk-xg-1vn"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="top" secondItem="ixQ-6M-2B9" secondAttribute="bottom" constant="15" id="Jvf-Jm-mli"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="top" secondItem="ixQ-6M-2B9" secondAttribute="bottom" constant="15" id="NMh-jV-ztF"/>
                             <constraint firstItem="9vf-q8-43m" firstAttribute="top" secondItem="p9d-yI-qfp" secondAttribute="bottom" constant="10" id="NuU-tp-z6J"/>
@@ -392,12 +659,12 @@
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" constant="15" id="PQY-xS-Pbk"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="top" secondItem="ixQ-6M-2B9" secondAttribute="bottom" constant="10" id="TOb-jd-hyk"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leadingMargin" constant="10" id="U0u-sO-Dfl"/>
-                            <constraint firstItem="jJz-Qi-4WO" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leadingMargin" constant="5" id="UmT-h7-bdb"/>
+                            <constraint firstItem="N0K-D7-ens" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" id="Ufz-eS-3DY"/>
                             <constraint firstAttribute="bottomMargin" secondItem="p9d-yI-qfp" secondAttribute="bottom" constant="15" id="YAe-ve-t7R"/>
+                            <constraint firstItem="9vf-q8-43m" firstAttribute="top" secondItem="N0K-D7-ens" secondAttribute="bottom" id="ada-Hu-WDw"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="top" secondItem="ixQ-6M-2B9" secondAttribute="bottom" id="pW4-Q6-Gva"/>
                             <constraint firstAttribute="trailing" secondItem="p9d-yI-qfp" secondAttribute="trailing" constant="15" id="tup-jV-Bjf"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="centerX" secondItem="sHB-NM-jnE" secondAttribute="centerX" id="ueU-4U-xUk"/>
-                            <constraint firstItem="jJz-Qi-4WO" firstAttribute="centerY" secondItem="pce-TI-QHp" secondAttribute="centerY" id="ygi-iU-jEW"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -421,12 +688,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bridge-67773_1280-1" width="1280" height="1042"/>
-        <image name="bridge-bw" width="1280" height="1042"/>
-        <image name="capital-273344_640" width="640" height="359"/>
-        <image name="church-1022787_640" width="472" height="640"/>
-        <image name="cityscape-1022729" width="2500" height="1667"/>
-        <image name="memorial" width="640" height="480"/>
-        <image name="sacramento-273365_1280" width="1280" height="853"/>
+        <image name="MemorialPhotosP" width="339" height="165"/>
+        <image name="aboutBGL" width="667" height="375"/>
+        <image name="aboutBGP" width="375" height="667"/>
+        <image name="bridge-bw" width="375" height="667"/>
+        <image name="bridge-bwL" width="667" height="375"/>
+        <image name="bridgePhotosP" width="165" height="165"/>
+        <image name="capitolPhotosP" width="165" height="165"/>
+        <image name="churchPhotosP" width="165" height="165"/>
+        <image name="photosBGP" width="375" height="667"/>
+        <image name="pyramidPhotosP" width="165" height="165"/>
     </resources>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E67241091CE2FF35000140AD /* BodyTextLbl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67241081CE2FF35000140AD /* BodyTextLbl.swift */; };
 		E6845A051CDF1DBC0049F2A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6845A041CDF1DBC0049F2A5 /* AppDelegate.swift */; };
 		E6845A071CDF1DBC0049F2A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6845A061CDF1DBC0049F2A5 /* ViewController.swift */; };
 		E6845A0A1CDF1DBC0049F2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6845A081CDF1DBC0049F2A5 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E67241081CE2FF35000140AD /* BodyTextLbl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyTextLbl.swift; sourceTree = "<group>"; };
 		E6845A011CDF1DBC0049F2A5 /* sacramento-favorite-place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sacramento-favorite-place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6845A041CDF1DBC0049F2A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6845A061CDF1DBC0049F2A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				E6845A161CDF29EA0049F2A5 /* RoundedBtn.swift */,
 				E6845A081CDF1DBC0049F2A5 /* Main.storyboard */,
 				E6A178441CE0809400C7F232 /* RoundedImg.swift */,
+				E67241081CE2FF35000140AD /* BodyTextLbl.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				E6845A071CDF1DBC0049F2A5 /* ViewController.swift in Sources */,
 				E6845A171CDF29EA0049F2A5 /* RoundedBtn.swift in Sources */,
 				E6845A051CDF1DBC0049F2A5 /* AppDelegate.swift in Sources */,
+				E67241091CE2FF35000140AD /* BodyTextLbl.swift in Sources */,
 				E6845A1E1CDF31530049F2A5 /* PhotosVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
