@@ -1189,6 +1189,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photosBG-iPad" translatesAutoresizingMaskIntoConstraints="NO" id="bUf-GT-248">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photosBGL" translatesAutoresizingMaskIntoConstraints="NO" id="qEt-7s-c6X">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <variation key="heightClass=compact" misplaced="YES">
@@ -1321,6 +1324,53 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qpK-gB-SQ6">
+                                <rect key="frame" x="29" y="87" width="757" height="546"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bbv-px-uPG">
+                                        <rect key="frame" x="20" y="31" width="165" height="495"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pyramidPhotosP" translatesAutoresizingMaskIntoConstraints="NO" id="ehp-Jk-ZHw" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="20" width="339" height="165"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bridgePhotosL" translatesAutoresizingMaskIntoConstraints="NO" id="B5a-Yd-Xlw" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="220" width="339" height="165"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" tag="-1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memorialPhotosL" translatesAutoresizingMaskIntoConstraints="NO" id="yso-tB-wDM" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="418" width="339" height="165"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="400" id="73J-cF-lhu">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="73J-cF-lhu"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular" axis="vertical">
+                                            <mask key="constraints">
+                                                <include reference="73J-cF-lhu"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vhs-wb-RpN">
+                                        <rect key="frame" x="398" y="20" width="339" height="330"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="capitolPhotosP" translatesAutoresizingMaskIntoConstraints="NO" id="3gK-Zy-S7x" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="339" height="165"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="churchPhotosL" translatesAutoresizingMaskIntoConstraints="NO" id="MMr-l0-RWW" customClass="RoundedImg" customModule="sacramento_favorite_place" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="241" width="339" height="165"/>
+                                            </imageView>
+                                        </subviews>
+                                        <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" alignment="fill"/>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p9d-yI-qfp">
                                 <rect key="frame" x="15" y="100" width="570" height="485"/>
                                 <subviews>
@@ -1354,15 +1404,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="9vf-q8-43m" firstAttribute="top" secondItem="qpK-gB-SQ6" secondAttribute="bottom" constant="40" id="0Hf-Mo-cgE"/>
                             <constraint firstItem="9vf-q8-43m" firstAttribute="top" secondItem="gYw-ip-BjF" secondAttribute="bottom" id="2CS-ER-jeh">
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
                             <constraint firstItem="N0K-D7-ens" firstAttribute="top" secondItem="sHB-NM-jnE" secondAttribute="top" id="2K9-nf-fhw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p9d-yI-qfp" secondAttribute="trailing" id="31G-Je-dA5"/>
                             <constraint firstAttribute="trailing" secondItem="ixQ-6M-2B9" secondAttribute="trailing" id="38t-yA-Hy8"/>
+                            <constraint firstAttribute="trailing" secondItem="bUf-GT-248" secondAttribute="trailing" id="3tQ-sA-cuC"/>
                             <constraint firstItem="9vf-q8-43m" firstAttribute="top" secondItem="p9d-yI-qfp" secondAttribute="bottom" id="65c-X3-ah3"/>
                             <constraint firstAttribute="trailing" secondItem="N0K-D7-ens" secondAttribute="trailing" id="67y-sy-ldx"/>
                             <constraint firstItem="NmH-ZK-ljp" firstAttribute="top" secondItem="sHB-NM-jnE" secondAttribute="topMargin" id="6z2-Pn-xCX"/>
+                            <constraint firstItem="bUf-GT-248" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" id="7GT-Ai-gJB"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="centerY" secondItem="sHB-NM-jnE" secondAttribute="centerY" id="96Z-yc-kLL"/>
                             <constraint firstItem="NmH-ZK-ljp" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" id="AeQ-Dr-NiI"/>
                             <constraint firstItem="ixQ-6M-2B9" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" id="CeF-O4-x6R"/>
@@ -1375,20 +1428,25 @@
                             <constraint firstItem="9vf-q8-43m" firstAttribute="top" secondItem="p9d-yI-qfp" secondAttribute="bottom" constant="10" id="NuW-Jw-KHg"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" constant="15" id="PQY-xS-Pbk"/>
                             <constraint firstItem="gYw-ip-BjF" firstAttribute="top" secondItem="NmH-ZK-ljp" secondAttribute="bottom" constant="10" id="Pvk-AF-Ij8"/>
+                            <constraint firstItem="bUf-GT-248" firstAttribute="top" secondItem="sHB-NM-jnE" secondAttribute="top" id="RcR-IT-2gq"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="top" secondItem="ixQ-6M-2B9" secondAttribute="bottom" constant="10" id="TOb-jd-hyk"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leadingMargin" constant="10" id="U0u-sO-Dfl"/>
                             <constraint firstItem="N0K-D7-ens" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" id="Ufz-eS-3DY"/>
+                            <constraint firstItem="9vf-q8-43m" firstAttribute="top" secondItem="bUf-GT-248" secondAttribute="bottom" id="Vbq-yx-2bD"/>
                             <constraint firstAttribute="bottomMargin" secondItem="p9d-yI-qfp" secondAttribute="bottom" constant="15" id="YAe-ve-t7R"/>
                             <constraint firstAttribute="trailing" secondItem="gYw-ip-BjF" secondAttribute="trailing" id="Yla-ym-Yd5">
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
                             <constraint firstAttribute="bottom" secondItem="qEt-7s-c6X" secondAttribute="bottom" id="a9d-Th-kk8"/>
                             <constraint firstItem="9vf-q8-43m" firstAttribute="top" secondItem="N0K-D7-ens" secondAttribute="bottom" id="ada-Hu-WDw"/>
+                            <constraint firstAttribute="trailing" secondItem="qpK-gB-SQ6" secondAttribute="trailing" constant="40" id="amA-fQ-Ij6"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="top" secondItem="NmH-ZK-ljp" secondAttribute="bottom" id="awy-Ma-pYA"/>
                             <constraint firstItem="gYw-ip-BjF" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" id="ec7-nx-Ack">
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
+                            <constraint firstItem="qpK-gB-SQ6" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" constant="40" id="h8J-Hd-L6j"/>
                             <constraint firstAttribute="trailing" secondItem="qEt-7s-c6X" secondAttribute="trailing" id="jFD-DD-vLK"/>
+                            <constraint firstItem="qpK-gB-SQ6" firstAttribute="top" secondItem="ixQ-6M-2B9" secondAttribute="bottom" constant="40" id="onq-gz-lA4"/>
                             <constraint firstItem="p9d-yI-qfp" firstAttribute="top" secondItem="ixQ-6M-2B9" secondAttribute="bottom" id="pW4-Q6-Gva"/>
                             <constraint firstItem="qEt-7s-c6X" firstAttribute="leading" secondItem="sHB-NM-jnE" secondAttribute="leading" id="rVj-B3-uwB"/>
                             <constraint firstAttribute="trailing" secondItem="p9d-yI-qfp" secondAttribute="trailing" constant="15" id="tup-jV-Bjf"/>
@@ -1398,9 +1456,13 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="bUf-GT-248"/>
                                 <exclude reference="qEt-7s-c6X"/>
+                                <exclude reference="N0K-D7-ens"/>
                                 <exclude reference="NmH-ZK-ljp"/>
                                 <exclude reference="gYw-ip-BjF"/>
+                                <exclude reference="qpK-gB-SQ6"/>
+                                <exclude reference="p9d-yI-qfp"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6z2-Pn-xCX"/>
@@ -1414,11 +1476,6 @@
                                 <exclude reference="31G-Je-dA5"/>
                                 <exclude reference="96Z-yc-kLL"/>
                                 <exclude reference="NMh-jV-ztF"/>
-                                <exclude reference="TOb-jd-hyk"/>
-                                <exclude reference="U0u-sO-Dfl"/>
-                                <exclude reference="awy-Ma-pYA"/>
-                                <exclude reference="pW4-Q6-Gva"/>
-                                <exclude reference="ueU-4U-xUk"/>
                                 <exclude reference="2CS-ER-jeh"/>
                                 <exclude reference="65c-X3-ah3"/>
                                 <exclude reference="NuU-tp-z6J"/>
@@ -1427,6 +1484,19 @@
                                 <exclude reference="a9d-Th-kk8"/>
                                 <exclude reference="jFD-DD-vLK"/>
                                 <exclude reference="rVj-B3-uwB"/>
+                                <exclude reference="TOb-jd-hyk"/>
+                                <exclude reference="U0u-sO-Dfl"/>
+                                <exclude reference="awy-Ma-pYA"/>
+                                <exclude reference="pW4-Q6-Gva"/>
+                                <exclude reference="ueU-4U-xUk"/>
+                                <exclude reference="3tQ-sA-cuC"/>
+                                <exclude reference="7GT-Ai-gJB"/>
+                                <exclude reference="RcR-IT-2gq"/>
+                                <exclude reference="amA-fQ-Ij6"/>
+                                <exclude reference="h8J-Hd-L6j"/>
+                                <exclude reference="onq-gz-lA4"/>
+                                <exclude reference="0Hf-Mo-cgE"/>
+                                <exclude reference="Vbq-yx-2bD"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -1447,12 +1517,34 @@
                                 <include reference="Pvk-AF-Ij8"/>
                                 <include reference="Yla-ym-Yd5"/>
                                 <include reference="ec7-nx-Ack"/>
-                                <include reference="awy-Ma-pYA"/>
                                 <include reference="2CS-ER-jeh"/>
                                 <include reference="NZw-Gm-mXe"/>
                                 <include reference="a9d-Th-kk8"/>
                                 <include reference="jFD-DD-vLK"/>
                                 <include reference="rVj-B3-uwB"/>
+                                <include reference="awy-Ma-pYA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="N0K-D7-ens"/>
+                                <include reference="p9d-yI-qfp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="bUf-GT-248"/>
+                                <include reference="qpK-gB-SQ6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3tQ-sA-cuC"/>
+                                <include reference="7GT-Ai-gJB"/>
+                                <include reference="RcR-IT-2gq"/>
+                                <include reference="amA-fQ-Ij6"/>
+                                <include reference="h8J-Hd-L6j"/>
+                                <include reference="onq-gz-lA4"/>
+                                <include reference="0Hf-Mo-cgE"/>
+                                <include reference="Vbq-yx-2bD"/>
                             </mask>
                         </variation>
                     </view>
@@ -1478,6 +1570,7 @@
         <image name="cityscape-1022730" width="431" height="656"/>
         <image name="ipadBG" width="1024" height="768"/>
         <image name="memorialPhotosL" width="305" height="262"/>
+        <image name="photosBG-iPad" width="1024" height="768"/>
         <image name="photosBGL" width="667" height="375"/>
         <image name="photosBGP" width="375" height="667"/>
         <image name="pyramidPhotosL" width="140" height="130"/>
