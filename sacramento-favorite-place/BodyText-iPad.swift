@@ -11,7 +11,7 @@ import UIKit
 class BodyText_iPad: UILabel {
 
     override func awakeFromNib() {
-        self.font = UIFont(name: "Avenir Next", size: 20.0)
+        self.font = UIFont(name: "Avenir Next", size: 18.0)
         self.minimumScaleFactor = 0.60
         self.layer.cornerRadius = 10
         clipsToBounds = true
@@ -19,7 +19,7 @@ class BodyText_iPad: UILabel {
     }
     
     override func drawTextInRect(rect: CGRect) {
-        let insets = UIEdgeInsets.init(top: 20, left: 10, bottom: 10, right: 10)
+        let insets = UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20)
         super.drawTextInRect(UIEdgeInsetsInsetRect(rect, insets))
     }
 
